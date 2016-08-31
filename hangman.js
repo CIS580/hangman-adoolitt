@@ -64,16 +64,16 @@ function guessLetter(elm) {
 
   var isLetter = 0;
   console.log(secretWord);
-  var newBlank = [];
-  for(i=0; i <= secretWord.length; i++)
+  var newBlank = '';
+  for(i=0; i < secretWord.length; i++)
   {
     if(letter.toLowerCase() == secretWord[i])
     {
-      newBlank.push(letter.toLowerCase());
+      newBlank += letter.toLowerCase();
       isLetter++;
       letterCount++;
     } else {
-		newBlank[i] = blanks[i];
+		newBlank += blanks[i];
 	}
   }
   blanks = newBlank;
